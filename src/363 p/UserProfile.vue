@@ -1,0 +1,140 @@
+<template>
+    <header>
+        <div id="headerTopDiv">
+            <div class="headerTop" id="LOGO">
+                <a href="">LOGO</a>
+            </div>
+            <div></div>
+            <div class="headerTop">
+                <a href="">HOME</a>
+            </div>
+        </div>
+        <div id="headerPInfo">
+            <img src="/7ayjc8s4j2n61.png" alt="PFP">
+            <button>Customization</button>
+            <button>Comments</button>
+            <button>Chat</button>
+        </div>
+    </header>
+    <main>
+        <div class="PInfo">
+            Name
+        </div>
+        <div class="PInfo">
+            Categories :
+        </div>
+        <div class="PInfo">
+            description :
+        </div>
+    </main>
+    <footer>
+        <div>
+            <img src="/Pngtreefreelancersworkstationa3d4054042.jpg" alt="LOGO">
+        </div>
+        <div>
+            Copyright 2024 SimplyHired
+        </div>
+    </footer>
+</template>
+
+<script>
+export default {
+    name: "UserProfile"
+}
+</script>
+
+<style scoped>
+    main {
+        margin: 0px 250px;
+        padding: 20px;
+    }
+
+    body {
+        margin: 0%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+
+    header {
+        background-image: url(Pngtreefreelancersworkstationa3d4054042.jpg);
+        background-size: 1600px 850px;
+        background-repeat: no-repeat;
+        height: 750px;
+        padding: 10px 20px;
+    }
+
+    footer {
+        background-color: #19212c;
+        color: aliceblue;
+        padding: 5px;
+        width: 1600px;
+        font-size: smaller;
+    }
+
+    .headerTop {
+        align-content: center;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 35px;
+        padding: 10px 0px;
+        margin-bottom: 100px;
+    }
+
+    a {
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    #headerTopDiv {
+        display: grid;
+        grid-template-columns: auto 60% auto;
+    }
+
+    #headerPInfo {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        margin-left: 45px;
+        align-items: center;
+    }
+
+    #headerPInfo img {
+        border-radius: 150px;
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    #headerPInfo button {
+        padding: 20px;
+        font-size: 25px;
+        border-radius: 10px;
+        margin: 20px;
+        font-weight: bold;
+        color: aliceblue;
+        background-color: #454e60;
+        width: fit-content;
+        transition: all .5s ease;
+    }
+
+    #headerPInfo button:hover {
+        color: rgb(0, 0, 0);
+        background-color: #ffffff;
+        border: #454e60 solid 3px;
+        padding: 25px;
+    }
+
+    .PInfo {
+        background-color: #2b3548;
+        width: fit-content;
+        padding: 15px;
+        font-size: 20px;
+        border-radius: 10px;
+        color: aliceblue;
+        font-weight: bold;
+        margin: 30px;
+    }
+
+    footer div {
+        margin: 20px;
+    }
+</style>

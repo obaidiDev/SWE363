@@ -1,15 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <head>
+    <title>Simply Hired</title>
+  </head>
+  <UsersNav/>
+  <router-view/>
+  <footer>        
+    <div>
+      <img src="" alt=" LOGO">
+    </div>
+    <div>
+      Copyright 2024 SimplyHired
+    </div>
+  </footer>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import UsersNav from './components/UsersNav.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    UsersNav
   }
 }
 </script>
@@ -21,6 +32,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+footer {
+    background-color: #19212c;
+    color: aliceblue;
+    padding: 5px;
+    font-size: smaller;
+}
+footer div {
+    margin: 10px 0px;
 }
 </style>

@@ -1,0 +1,125 @@
+body {
+    margin: 0%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+header {
+    background-image: url(Pngtreefreelancersworkstationa3d4054042.jpg);
+    background-size: 1600px 650px;
+    background-repeat: no-repeat;
+    height: 450px;
+    padding: 10px 20px;
+}
+footer {
+    background-color: #19212c;
+    color: aliceblue;
+    padding: 5px;
+    width: 1600px;
+    font-size: smaller;
+}
+.headerTop {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size:35px;
+    padding: 10px 0px;
+    margin-bottom: 30px;
+}
+#headerTopDiv {
+    display: grid;
+    grid-template-columns: auto 60% auto auto;
+}
+.checked {
+    color: orange;
+}
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+#headerPInfo {
+    display: flex;
+    flex-direction: column;
+    width: 1450px;
+    align-items: center;
+}
+#headerPInfo img {
+    border-radius: 150px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+#headerPInfo button {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 5px;
+    font-weight: bold;
+    color: aliceblue;
+    background-color:#454e60 ;
+    width: fit-content;
+    transition: all .5s ease;
+}
+#headerPInfo button:hover {
+    color: rgb(0, 0, 0);
+    background-color:#ffffff ;
+    border: #454e60 solid 3px; 
+    padding: 15px;
+}
+.PInfo {
+    background-color: #2b3548;
+    width: fit-content;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: aliceblue;
+    font-weight: bold;
+    margin: 30px;
+}
+footer div {
+    margin: 20px;
+}
+#Categories {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    align-items: center;
+}
+#Categories a {
+    background-color:#454e60 ;
+    margin: 0px 10px;
+    padding: 10px;
+    color: aliceblue;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all .5s ease;
+    border: #1f232c solid 1px; 
+    
+}
+#Categories a:hover {
+    color: rgb(0, 0, 0);
+    background-color:#ffffff ;
+    border: #454e60 solid 3px; 
+}
+#des {
+    margin-left: 40px;
+    width: 700px;
+    border: #454e60 solid 3px;
+    padding: 5px;
+    border-radius: 10px;
+}
+#samples {
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.sample {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: #454e60 solid 5px; 
+    border-radius: 70px;
+    margin: 5px 30px;
+    transition: all .5s ease;
+}
+.sample:hover {
+    
+}
