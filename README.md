@@ -1,4 +1,4 @@
-# freelancing-hub
+# Simply Hired
 
 ## Project setup
 ```
