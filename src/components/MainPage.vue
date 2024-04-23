@@ -39,7 +39,7 @@
   }
 </script>
   
-<style>
+<style scoped>
   header{
     padding: 0;
     margin: 0;

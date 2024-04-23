@@ -10,7 +10,7 @@
             </div>
         </div>
         <div id="headerPInfo">
-            <img src="/7ayjc8s4j2n61.png" alt="PFP">
+            <img src="../assets/7ayjc8s4j2n61.png" alt="PFP">
             <button>Customization</button>
             <button>Comments</button>
             <button>Chat</button>
@@ -27,14 +27,6 @@
             description :
         </div>
     </main>
-    <footer>
-        <div>
-            <img src="/Pngtreefreelancersworkstationa3d4054042.jpg" alt="LOGO">
-        </div>
-        <div>
-            Copyright 2024 SimplyHired
-        </div>
-    </footer>
 </template>
 
 <script>
@@ -55,19 +47,11 @@ export default {
     }
 
     header {
-        background-image: url(Pngtreefreelancersworkstationa3d4054042.jpg);
+        background-image: url(../assets/Pngtreefreelancersworkstationa3d4054042.jpg);
         background-size: 1600px 850px;
         background-repeat: no-repeat;
         height: 750px;
         padding: 10px 20px;
-    }
-
-    footer {
-        background-color: #19212c;
-        color: aliceblue;
-        padding: 5px;
-        width: 1600px;
-        font-size: smaller;
     }
 
     .headerTop {
