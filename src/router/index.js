@@ -4,7 +4,7 @@ import MyFreelancers from '../components/MyFreelancers.vue';
 import UserProfile from "../components/UserProfile.vue";
 const routes = [
   {
-    path: '',
+    path: '/',
     redirect: '/MainPage'
   },
   {

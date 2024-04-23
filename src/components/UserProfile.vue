@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div id="headerTopDiv">
+        <!-- <div id="headerTopDiv">
             <div class="headerTop" id="LOGO">
                 <a href="">LOGO</a>
             </div>
@@ -8,7 +8,7 @@
             <div class="headerTop">
                 <a href="">HOME</a>
             </div>
-        </div>
+        </div> -->
         <div id="headerPInfo">
             <img src="../assets/7ayjc8s4j2n61.png" alt="PFP">
             <button>Customization</button>

@@ -5,7 +5,7 @@
             <nav>
                 <router-link to="/MainPage">Home</router-link>
                 <router-link to="/MyFreelancers">My freelancers</router-link>
-                <router-link to="../363 p/Profile.HTML">Profile</router-link>
+                <router-link to="/UserProfile">Profile</router-link>
                 <router-link to="../four/login.html">Log out</router-link>
             </nav>
         </div>
