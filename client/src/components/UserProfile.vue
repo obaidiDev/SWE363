@@ -1,32 +1,34 @@
 <template>
-    <header>
-        <!-- <div id="headerTopDiv">
-            <div class="headerTop" id="LOGO">
-                <a href="">LOGO</a>
+    <bode>
+        <header>
+            <!-- <div id="headerTopDiv">
+                <div class="headerTop" id="LOGO">
+                    <a href="">LOGO</a>
+                </div>
+                <div></div>
+                <div class="headerTop">
+                    <a href="">HOME</a>
+                </div>
+            </div> -->
+            <div id="headerPInfo">
+                <img src="../assets/7ayjc8s4j2n61.png" alt="PFP">
+                <button>Customization</button>
+                <button>Comments</button>
+                <button>Chat</button>
             </div>
-            <div></div>
-            <div class="headerTop">
-                <a href="">HOME</a>
+        </header>
+        <main>
+            <div class="PInfo">
+                Name
             </div>
-        </div> -->
-        <div id="headerPInfo">
-            <img src="../assets/7ayjc8s4j2n61.png" alt="PFP">
-            <button>Customization</button>
-            <button>Comments</button>
-            <button>Chat</button>
-        </div>
-    </header>
-    <main>
-        <div class="PInfo">
-            Name
-        </div>
-        <div class="PInfo">
-            Categories :
-        </div>
-        <div class="PInfo">
-            description :
-        </div>
-    </main>
+            <div class="PInfo">
+                Categories :
+            </div>
+            <div class="PInfo">
+                description :
+            </div>
+        </main>
+    </bode>
 </template>
 
 <script>
