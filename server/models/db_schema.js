@@ -12,7 +12,7 @@ const  freelancerSchema = mongoose.Schema({
     email: String,
     password: String,
     numberOfRatings: Number,
-    reviews: [String],
+    reviews: [{type: mongoose.Schema.Types.ObjectId, ref:"Review"}],
     avatar: {type: String, default: "../client/src/assets/user-icon.png"},
     workingWith: [{type: mongoose.Schema.Types.ObjectId, ref:"User"}] 
 });
@@ -29,8 +29,7 @@ const offerSchema = mongoose.Schema({
 })
 
 const User = mongoose.model("User",userSchema);
-const Freelancer = mongoose.model("freelancer",freelancerSchema);
+const Freelancer = mongoose.model("reelancer",freelancerSchema);
 const Review = mongoose.model("Review",reviewSchema);
 const Offer = mongoose.model("Offer",offerSchema);
-
 module.exports = {User,Freelancer,Review,Offer};
