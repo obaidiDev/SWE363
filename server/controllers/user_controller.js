@@ -1,5 +1,4 @@
 const User = require("../models/db_schema").User;
-const getFreelancersById = require("./freelancer_controller").getManyFreelancersByIds;
 
 //tested
 async function createUser(userData){
@@ -21,15 +20,17 @@ async function deleteUserById(userId){
     return await User.deleteOne({_id: userId});
 }
 
+//tested
 async function getFreelancers(userId){
     const user = await getUserById(userId);
-    return await getFreelancersById(user.freelancers);
+    return user.freelancers; // list of Ids
 }
 
-async function addFreelancers(userId, freelancersToAdd){
+//tested, there is a latency
+async function addFreelancer(userId, freelancerId){
     const user = await getUserById(userId);
     const freelancers = user.freelancers;
-    freelancers.push([freelancersToAdd]);
+    freelancers.push(freelancerId);
     return await user.save();
 }
  // tesetd
@@ -38,12 +39,10 @@ async function setAvatar(userId, imageSrc){
     return user.save({avatar: imageSrc});
 }
 
-async function tester(){
-    // const fadel = await createUser({username: "Fadel", email: "fadel", password: "fadel"});
-    const fadel = await getManyUsersByIds('66420c5b1eab539f8fe08eb1');
-    console.log(await getFreelancersById("66420c5b1eab539f8fe08eb1"))
-    console.log(fadel);
-}
-tester();
-
-module.exports = {getManyUsersByIds}
+// async function tester(){
+//     // const fadel = await createUser({username: "Fadel", email: "fadel", password: "fadel"});
+//     const fadel = await getManyUsersByIds('66420c5b1eab539f8fe08eb1');
+//     // const freelancer = await addFreelancer("66420c5b1eab539f8fe08eb1","664256799c7b589af9469bf4");
+//     console.log(fadel);
+// }
+// tester();
