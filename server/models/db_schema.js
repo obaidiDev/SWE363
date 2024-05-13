@@ -19,7 +19,8 @@ const  freelancerSchema = mongoose.Schema({
 
 const reviewSchema = mongoose.Schema({
     text: String,
-    author: {type: mongoose.Schema.Types.ObjectId, ref:"User"}
+    author: {type: mongoose.Schema.Types.ObjectId, ref:"User"},
+    about: {type: mongoose.Schema.Types.ObjectId, ref:"Freelancer"}
 })
 
 const offerSchema = mongoose.Schema({
@@ -29,7 +30,7 @@ const offerSchema = mongoose.Schema({
 })
 
 const User = mongoose.model("User",userSchema);
-const Freelancer = mongoose.model("reelancer",freelancerSchema);
+const Freelancer = mongoose.model("Freelancer",freelancerSchema);
 const Review = mongoose.model("Review",reviewSchema);
 const Offer = mongoose.model("Offer",offerSchema);
 module.exports = {User,Freelancer,Review,Offer};
