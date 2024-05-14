@@ -40,10 +40,12 @@ async function addEmployer(freelancerId, employerId){
     return await freelancer.save();
 }
 
-async function tester(){
-    // const fadel = await createFreelancer({name:"fadel",email:"fadel",password:"fadel"});
-    const fadel = await getFreelancerById("664256799c7b589af9469bf4");
-    // await addEmployer("664256799c7b589af9469bf4","66420c5b1eab539f8fe08eb1");
-    const employers = await getEmployers("664256799c7b589af9469bf4");
-    console.log(employers);
-}
+// async function tester(){
+//     // const fadel = await createFreelancer({name:"fadel",email:"fadel",password:"fadel"});
+//     const fadel = await getFreelancerById("664256799c7b589af9469bf4");
+//     // await addEmployer("664256799c7b589af9469bf4","66420c5b1eab539f8fe08eb1");
+//     const employers = await getEmployers("664256799c7b589af9469bf4");
+//     console.log(employers);
+// }
+
+module.exports = {createFreelancer};

@@ -2,12 +2,13 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "controllers/user_controller.js",
+  "main": "index.js",
   "scripts": {
     "start:server": "nodemon index.js --ignore '../client'",
     "start:client": "cd ../client && npm run serve",
     "dev": "concurrently \"npm run start:server\" \"npm run start:client\"",
-    "uc": "nodemon /controllers/user_controller.js"
+    "uc": "nodemon /controllers/user_controller.js",
+    "fc": "nodemon /controllers/freelancer_controller.js"
   },
   "keywords": [],
   "author": "",
@@ -17,10 +18,17 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "express-session": "^1.18.0",
     "json-server": "^0.17.4",
-    "mongoose": "^8.3.4"
+    "jwt-simple": "^0.5.6",
+    "mongoose": "^8.3.4",
+    "nunjucks": "^3.2.4",
+    "path": "^0.12.7",
+    "vue": "^3.4.27",
+    "vue-loader": "^17.3.1"
   },
   "devDependencies": {
+    "@vue/compiler-sfc": "^3.4.27",
     "concurrently": "^8.2.2",
     "nodemon": "^3.1.0"
   }

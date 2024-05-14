@@ -46,3 +46,5 @@ async function setAvatar(userId, imageSrc){
 //     console.log(fadel);
 // }
 // tester();
+
+module.exports = {createUser};

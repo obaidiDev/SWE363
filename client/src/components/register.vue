@@ -60,6 +60,14 @@
               placeholder="Please enter your Password.."
             />
           </div>
+          <div style="text-align: left;" id="roles">
+          <label for="roles" class="fourText">Register as</label>
+          <br>
+          <input type="radio" id="user" name="role" value="user">
+          <label for="user">User</label><br>
+          <input type="radio" id="freelancer" name="role" value="freelancer">
+          <label for="freelancer">Freelancer</label><br>
+        </div>
           <br />
           <button class="button1" style="width: 450px" @click="submitForm">
             SUBMIT

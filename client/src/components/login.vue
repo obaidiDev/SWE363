@@ -10,7 +10,7 @@
           <input
             class="input"
             type="text"
-            name="userName"
+            name="username"
             id="userName"
             placeholder="Please enter your Username.."
           />
@@ -20,12 +20,19 @@
           <input
             class="input"
             type="password"
-            name="passwordName1"
+            name="password"
             id="passwordId1"
             placeholder="Please enter your Password.."
           />
         </div>
-        <br />
+        <div style="text-align: left;" id="roles">
+          <label for="roles" class="fourText">Log in as</label>
+          <br>
+          <input type="radio" id="user" name="role" value="user">
+          <label for="user">User</label><br>
+          <input type="radio" id="freelancer" name="role" value="freelancer">
+          <label for="freelancer">Freelancer</label><br>
+        </div>
         <button class="button1">LOGIN</button>
         <router-link
           to="/register"
