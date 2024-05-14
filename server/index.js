@@ -20,18 +20,8 @@ app.use(session({
     saveUninitialized: false // don't create session until something stored
 }));
 
-nunjucks.configure('views', {
-    express: app,
-    autoescape:false
-});
-app.set('view engine', 'njk');
-app.use(express.static(path.join(__dirname,'public')));
+app.use('/', auth_router);
 
-app.use(auth_router);
-
-// app.get('/', (req, res) => {
-//     res.send('Hello World');
-// });
 
 app.listen(process.env.PORT, () => {
     console.log(`App is listening at http://localhost:${process.env.PORT}`);

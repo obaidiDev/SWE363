@@ -45,7 +45,24 @@
   </div>
 </template>
 <script>
-export default { name: 'loginPage' };
+import axios  from 'axios';
+export default { name: 'loginPage',methods:{
+  async login() {
+      try {
+        const response = await axios.post('http://localhost:3000/login', {
+          username: this.username,
+          password: this.password
+        });
+        const token = response.data.token;
+        localStorage.setItem('token', token);
+        // Redirect to another route after successful login
+        this.$router.push('/MainPage');
+      } catch (error) {
+        console.error('Login failed:', error);
+      }
+    }
+  }
+};
 </script>
 <style>
 .button1 {

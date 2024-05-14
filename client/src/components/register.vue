@@ -85,7 +85,37 @@
   </div>
 </template>
 <script>
-export default { name: 'registerPage' };
+import axios  from 'axios';
+export default { name: 'registerPage',data() {
+    return {
+      firstName: '',
+      lastName: '',
+      email: '',
+      username: '',
+      password: '',
+      role: 'user' // Set default role to 'user'
+    };
+  },
+  methods: {
+    async submitForm() {
+      try {
+        const response = await axios.post('http://localhost:3000/register', {
+          firstName: this.firstName,
+          lastName: this.lastName,
+          email: this.email,
+          username: this.username,
+          password: this.password,
+          role: this.role
+        });
+        const token = response.data.token;
+        localStorage.setItem('token', token);
+        this.$router.push('/MainPage');
+      } catch (error) {
+        console.error('Registration failed:', error);
+      }
+    }
+  }
+};
 </script>
 <style>
 .button1 {

@@ -47,4 +47,4 @@ async function setAvatar(userId, imageSrc){
 // }
 // tester();
 
-module.exports = {createUser};
+module.exports = {createUser,getUserById};
