@@ -3,10 +3,10 @@
         <div class="logo-container"><img class="logo" src="../assets/logo.png" alt="logo"></div>
         <div class="nav-container">
             <nav>
-                <router-link to="/MainPage">Home</router-link>
-                <router-link to="/MyFreelancers">My freelancers</router-link>
+                <router-link :to="'/MainPage/'+loggerString">Home</router-link>
+                <router-link :to="'/MyFreelancers/' + id">My freelancers</router-link>
                 <router-link to="/UserProfile">Profile</router-link>
-                <router-link to="../four/login.html">Log out</router-link>
+                <router-link to="login">Log out</router-link>
             </nav>
         </div>
         <div class="search-container">
@@ -20,10 +20,28 @@
 </template>
 
 <script>
-export default{
-    name: "UsersNav"
+export default {
+    name: "UsersNav",
+    data() {
+        return {
+            loggerString: '',
+            id: '',
+        };
+    },
+    created() {
+        this.loggerString = localStorage.getItem('logger');
+        if (this.loggerString) {
+            const logger = JSON.parse(this.loggerString);
+            this.id = logger._id;
+            // Use the id and role as needed
+        }
+    }
 }
 </script>
+
+<style scoped>
+/* Styles */
+</style>
 
 <style scoped>
 nav a{

@@ -2,14 +2,7 @@
     <main>
         <h1>My Freelanceres</h1>
         <div class="freelancers">
-            <FreelancerDiv :src="path" alt="user" name="User" project="User"/>
-            <FreelancerDiv :src="path" alt="user" name="User" project="User"/>
-            <FreelancerDiv :src="path" alt="user" name="User" project="User"/>
-            <FreelancerDiv :src="path" alt="user" name="User" project="User"/>
-            <FreelancerDiv :src="path" alt="user" name="User" project="User"/>
-            <FreelancerDiv :src="path" alt="user" name="User" project="User"/>
-            <FreelancerDiv :src="path" alt="user" name="User" project="User"/>
-            <FreelancerDiv :src="path" alt="user" name="User" project="User"/>
+            <FreelancerDiv :src="path" alt="user" name="fadel" project="AI"/>
         </div>
     </main>
 </template>

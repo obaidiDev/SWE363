@@ -6,6 +6,7 @@
         <article>
             <p>{{ name }}</p>
             <p>{{ project }}</p>
+            <p>user-ai@gmail.com</p>
         </article>
     </div>
 </template>

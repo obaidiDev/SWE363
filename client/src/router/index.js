@@ -8,15 +8,15 @@ import Login from '../components/login.vue';
 const routes = [
   {
     path: '/',
-    redirect: '/MainPage'
+    redirect: '/login'
   },
   {
-    path: '/MainPage',
+    path: '/MainPage/:loggerString',
     name: 'MainPage',
     component: MainPage
   },
   {
-    path: '/MyFreelancers',
+    path: '/MyFreelancers/:id',
     name: 'MyFreelancers',
     component: MyFreelancers
   },
@@ -43,7 +43,8 @@ const routes = [
 ];
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+    base: "/app"
   });
   
   export default router;

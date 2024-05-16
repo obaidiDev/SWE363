@@ -19,13 +19,13 @@
         </header>
         <main>
             <div class="PInfo">
-                Name
+                username: fadhel
             </div>
             <div class="PInfo">
-                Categories :
+                Categories: AI
             </div>
             <div class="PInfo">
-                description :
+                description:
             </div>
         </main>
     </bode>

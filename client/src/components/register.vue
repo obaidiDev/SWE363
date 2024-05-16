@@ -8,7 +8,7 @@
           Registration
         </h1>
         <br />
-        <form action="" method="post">
+        <form action="http://localhost:3000/api/simplyhired/register" method="post">
           <div id="name">
             <div class="label-left">
               <label for="firstName" class="fourText">First Name</label> <br />
@@ -18,6 +18,7 @@
                 type="text"
                 v-model="firstName"
                 placeholder="your first name.."
+                name="firstName"
               />
             </div>
             <div class="label-left" style="margin-left: 50px">
@@ -27,6 +28,7 @@
                 type="text"
                 v-model="lastName"
                 placeholder="last name.."
+                name="lastName"
               />
             </div>
           </div>
@@ -38,6 +40,7 @@
               type="text"
               v-model="email"
               placeholder="Please enter your Email.."
+              name="email"
             />
           </div>
           <br />
@@ -48,6 +51,7 @@
               type="text"
               v-model="userName"
               placeholder="Please enter a Username.."
+              name="username"
             />
           </div>
           <br />
@@ -58,6 +62,7 @@
               type="password"
               v-model="password"
               placeholder="Please enter your Password.."
+              name="password"
             />
           </div>
           <div style="text-align: left;" id="roles">
@@ -69,9 +74,7 @@
           <label for="freelancer">Freelancer</label><br>
         </div>
           <br />
-          <button class="button1" style="width: 450px" @click="submitForm">
-            SUBMIT
-          </button>
+          <input class="button1" style="width: 450px" @click="submitForm" value="register" type="submit">
           <button
             to="/login"
             class="button2"
@@ -85,7 +88,6 @@
   </div>
 </template>
 <script>
-import axios  from 'axios';
 export default { name: 'registerPage',data() {
     return {
       firstName: '',
@@ -95,25 +97,6 @@ export default { name: 'registerPage',data() {
       password: '',
       role: 'user' // Set default role to 'user'
     };
-  },
-  methods: {
-    async submitForm() {
-      try {
-        const response = await axios.post('http://localhost:3000/register', {
-          firstName: this.firstName,
-          lastName: this.lastName,
-          email: this.email,
-          username: this.username,
-          password: this.password,
-          role: this.role
-        });
-        const token = response.data.token;
-        localStorage.setItem('token', token);
-        this.$router.push('/MainPage');
-      } catch (error) {
-        console.error('Registration failed:', error);
-      }
-    }
   }
 };
 </script>

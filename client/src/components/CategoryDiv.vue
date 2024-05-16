@@ -4,7 +4,7 @@
         <article>
             <h2>{{ category }}</h2>
             <p>{{ description }}</p>
-            <button>Explore</button>
+            <button><router-link :to="'/MyFreelancers/' + id">Explore</router-link></button>
         </article>
     </div>
 </template>
@@ -16,6 +16,19 @@ export default{
         alt: String,
         category: String,
         description: String
+    },    data() {
+        return {
+            loggerString: '',
+            id: '',
+        };
+    },
+    created() {
+        this.loggerString = localStorage.getItem('logger');
+        if (this.loggerString) {
+            const logger = JSON.parse(this.loggerString);
+            this.id = logger._id;
+            // Use the id and role as needed
+        }
     }
 }
 </script>

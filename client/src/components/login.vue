@@ -4,7 +4,7 @@
       <h1 class="fourText" style="margin-left: 0px; font-size: xx-large">
         Login
       </h1>
-      <form action="" method="post">
+      <form action="http://localhost:3000/api/simplyhired/login" method="post">
         <div style="text-align: left">
           <label for="userName" class="fourText">Username</label><br />
           <input
@@ -33,7 +33,7 @@
           <input type="radio" id="freelancer" name="role" value="freelancer">
           <label for="freelancer">Freelancer</label><br>
         </div>
-        <button class="button1">LOGIN</button>
+        <input type="submit" value="submit" class="button1">
         <router-link
           to="/register"
           class="button2"
@@ -48,10 +48,12 @@
 import axios  from 'axios';
 export default { name: 'loginPage',methods:{
   async login() {
+    const API_URL = "http://localhost:3000/api/simplyhired";
+    console.log("done");
       try {
-        const response = await axios.post('http://localhost:3000/login', {
+        const response = await axios.post(API_URL+'/login', {
           username: this.username,
-          password: this.password
+          role: this.role
         });
         const token = response.data.token;
         localStorage.setItem('token', token);
@@ -61,8 +63,7 @@ export default { name: 'loginPage',methods:{
         console.error('Login failed:', error);
       }
     }
-  }
-};
+  }};
 </script>
 <style>
 .button1 {
